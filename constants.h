@@ -1,5 +1,5 @@
-#ifndef CONSTANTS_H
-#define CONSTANTS_H
+#ifndef SDKCONSTANTS_H
+#define SDKCONSTANTS_H
 
 namespace KittySDK
 {
@@ -9,6 +9,7 @@ namespace KittySDK
     {
       QUIT = 1,
       SETTINGS,
+      PLUGIN,
 
 
       LAST
@@ -29,4 +30,4 @@ namespace KittySDK
   }
 }
 
-#endif // CONSTANTS_H
+#endif // SDKCONSTANTS_H
