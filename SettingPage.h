@@ -16,6 +16,9 @@ namespace KittySDK
       QString name() { return m_name; }
       void setName(const QString &name) { m_name = name; }
 
+      virtual void apply() { }
+      virtual void reset() { }
+
     private:
       QString m_name;
   };
