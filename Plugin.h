@@ -1,6 +1,8 @@
 #ifndef SDKPLUGIN_H
 #define SDKPLUGIN_H
 
+#include "PluginCore.h"
+
 #include <QtCore/QObject>
 #include <QtCore/QtPlugin>
 
@@ -17,7 +19,6 @@ namespace KittySDK
       QString email() const { return m_email; }
       QString www() const { return m_www; }
 
-
     private:
       QString m_author;
       QString m_email;
@@ -29,15 +30,22 @@ namespace KittySDK
     Q_OBJECT
 
     public:
+      Plugin(): QObject(0) { }
 
       enum { Type = 1 };
       int type() const { return Type; }
+
+      void setCore(PluginCore *core) { m_core = core; }
+
+      PluginInfo *info() const { return m_info; }
+      PluginCore *core() const { return m_core; }
 
     public slots:
       virtual void applySettings() { }
 
     protected:
       PluginInfo *m_info;
+      PluginCore *m_core;
   };
 }
 
@@ -46,7 +54,7 @@ Q_EXTERN_C Q_DECL_EXPORT QObject *inst() \
 { \
   static QPointer<QObject> m_inst; \
   if(!m_inst) { \
-      m_inst = new PLUGINCLASS; \
+      m_inst = new PLUGINCLASS(); \
   } \
   return m_inst; \
 }
