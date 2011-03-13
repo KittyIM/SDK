@@ -1,10 +1,10 @@
 #ifndef SDKPLUGINCORE_H
 #define SDKPLUGINCORE_H
 
+#include <QtCore/QVariant>
 #include <QtCore/QObject>
 
 class QString;
-class QVariant;
 
 namespace KittySDK
 {
