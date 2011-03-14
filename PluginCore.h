@@ -13,8 +13,8 @@ namespace KittySDK
     Q_OBJECT
 
     public:
-      QVariant setting(const QString &key, const QVariant &defaultValue = QVariant());
-      void setSetting(const QString &key, const QVariant &value);
+      virtual QVariant setting(const QString &key, const QVariant &defaultValue = QVariant()) = 0;
+      virtual void setSetting(const QString &key, const QVariant &value) = 0;
   };
 }
 
