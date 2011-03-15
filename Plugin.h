@@ -59,10 +59,22 @@ namespace KittySDK
 
     public slots:
       virtual void applySettings() { }
+      virtual void updateIcons() { }
 
     protected:
       PluginInfo *m_info;
       PluginCore *m_core;
+  };
+
+  class Protocol: public Plugin
+  {
+    Q_OBJECT
+
+    public:
+      Protocol(PluginCore *core): Plugin(core) { }
+
+      enum { Type = 2 };
+      int type() const { return Type; }
   };
 }
 
