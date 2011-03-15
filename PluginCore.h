@@ -19,6 +19,9 @@ namespace KittySDK
       virtual void setSetting(const QString &key, const QVariant &value) = 0;
 
       virtual void addSettingPage(SettingPage *page, const QString &parent) = 0;
+
+      virtual QPixmap icon(const QString &id) = 0;
+      virtual void addIcon(const QString &id, const QPixmap &pixmap, bool replace = true) = 0;
   };
 }
 
