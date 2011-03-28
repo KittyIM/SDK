@@ -7,9 +7,12 @@
 #include <QtCore/QtPlugin>
 
 class QString;
+class QWidget;
 
 namespace KittySDK
 {
+  class Account;
+
   class PluginInfo
   {
     public:
@@ -71,7 +74,21 @@ namespace KittySDK
     Q_OBJECT
 
     public:
+      enum Status
+      {
+        Online = 1,
+        Away,
+        FFC,
+        DND,
+        Invisible,
+        Offline
+      };
+
+    public:
       Protocol(PluginCore *core): Plugin(core) { }
+
+      virtual Account *newAccount(const QString &uid) = 0;
+      virtual QWidget *editWindow(Account *account) = 0;
 
       enum { Type = 2 };
       int type() const { return Type; }
