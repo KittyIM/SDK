@@ -1,7 +1,7 @@
 #ifndef SDKACCOUNT_H
 #define SDKACCOUNT_H
 
-#include "Plugin.h"
+#include "Protocol.h"
 
 #include <QtCore/QObject>
 

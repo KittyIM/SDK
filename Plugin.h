@@ -68,31 +68,6 @@ namespace KittySDK
       PluginInfo *m_info;
       PluginCore *m_core;
   };
-
-  class Protocol: public Plugin
-  {
-    Q_OBJECT
-
-    public:
-      enum Status
-      {
-        Online = 1,
-        Away,
-        FFC,
-        DND,
-        Invisible,
-        Offline
-      };
-
-    public:
-      Protocol(PluginCore *core): Plugin(core) { }
-
-      virtual Account *newAccount(const QString &uid) = 0;
-      virtual QWidget *editWindow(Account *account) = 0;
-
-      enum { Type = 2 };
-      int type() const { return Type; }
-  };
 }
 
 #define KITTY_PLUGIN(PLUGINCLASS) \
