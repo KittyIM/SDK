@@ -10,6 +10,8 @@ class QMenu;
 
 namespace KittySDK
 {
+  class Contact;
+
   class Account: public QObject
   {
     Q_OBJECT

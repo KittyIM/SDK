@@ -11,6 +11,8 @@ namespace KittySDK
   {
     Q_OBJECT
     Q_PROPERTY(QString uid READ uid WRITE setUid)
+    Q_PROPERTY(QString display READ display WRITE setDisplay)
+    Q_PROPERTY(QString group READ group WRITE setGroup)
     Q_PROPERTY(KittySDK::Protocol::Status status READ status WRITE setStatus)
 
     public:
@@ -19,13 +21,25 @@ namespace KittySDK
       QString uid() const { return m_uid; }
       void setUid(const QString &uid) { m_uid = uid; }
 
+      QString display() const { return m_display; }
+      void setDisplay(const QString &display) { m_display = display; }
+
+      QString group() const { return m_group; }
+      void setGroup(const QString &group) { m_group = group; }
+
       KittySDK::Protocol::Status status() const { return m_status; }
       void setStatus(KittySDK::Protocol::Status status) { m_status = status; }
 
       KittySDK::Account *account() const { return m_account; }
 
+    public slots:
+      virtual void loadSettings(const QMap<QString, QVariant> &settings) { }
+      virtual QMap<QString, QVariant> saveSettings() { return QMap<QString, QVariant>(); }
+
     private:
       QString m_uid;
+      QString m_display;
+      QString m_group;
       KittySDK::Protocol::Status m_status;
       KittySDK::Account *m_account;
   };
