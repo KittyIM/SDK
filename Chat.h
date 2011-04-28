@@ -1,14 +1,13 @@
 #ifndef SDKCHAT_H
 #define SDKCHAT_H
 
-#include "Account.h"
+#include "Contact.h"
 
 #include <QtCore/QObject>
 
 namespace KittySDK
 {
   class Protocol;
-  class Contact;
   class Message;
 
   class Chat: public QObject
@@ -16,15 +15,16 @@ namespace KittySDK
     Q_OBJECT
 
     public:
-      Chat(Account *account, const QList<Contact*> &contacts): QObject(account), m_account(account), m_contacts(contacts) { }
+      Chat(Contact *me, const QList<Contact*> &contacts): QObject(me), m_me(me), m_contacts(contacts) { }
 
-      Account *account() const { return m_account; }
-      Protocol *protocol() const { return m_account->protocol(); }
+      Contact *me() const { return m_me; }
+      Account *account() const { return m_me->account(); }
+      Protocol *protocol() const { return account()->protocol(); }
 
       const QList<Contact*> &contacts() const { return m_contacts; }
 
     private:
-      Account *m_account;
+      Contact *m_me;
       QList<Contact*> m_contacts;
   };
 }
