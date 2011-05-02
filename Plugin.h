@@ -53,7 +53,7 @@ namespace KittySDK
     Q_OBJECT
 
     public:
-      Plugin(PluginCore *core): QObject(0), m_core(core) { }
+      Plugin(PluginCore *core): QObject(0), m_info(0), m_core(core) { }
 
       enum { Type = 1 };
       virtual int type() const { return Type; }

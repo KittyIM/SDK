@@ -68,8 +68,8 @@ namespace KittySDK
       void setAbilities(const Abilities &abilities) { m_abilities = abilities; }
 
       virtual QString statusIcon(KittySDK::Protocol::Status status) { return ""; }
-      virtual Account *newAccount(const QString &uid) = 0;
-      virtual QWidget *editWindow(Account *account = 0) = 0;
+      virtual Account *newAccount(const QString &uid) { return 0; }
+      virtual QWidget *editWindow(Account *account = 0) { return 0; }
 
       enum { Type = 2 };
       int type() const { return Type; }
