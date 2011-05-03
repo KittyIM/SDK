@@ -27,7 +27,7 @@ namespace KittySDK
     const char * const I_BOLD           = "Kitty.Bold";
     const char * const I_ITALIC         = "Kitty.Italic";
     const char * const I_UNDERLINE      = "Kitty.Underline";
-    const char * const I_STRIKETROUGH   = "Kitty.Striketrough";
+    const char * const I_STRIKETHROUGH   = "Kitty.Striketrough";
     const char * const I_COLOR          = "Kitty.Color";
     const char * const I_IMAGE          = "Kitty.Image";
     const char * const I_FILE           = "Kitty.File";
@@ -35,7 +35,7 @@ namespace KittySDK
     const char * const I_DELETE         = "Kitty.Delete";
     const char * const I_COPY           = "Kitty.Copy";
     const char * const I_GROUP          = "Kitty.Group";
-
+    const char * const I_SOUND          = "Kitty.Sound";
 
   }
 
