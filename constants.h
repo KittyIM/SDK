@@ -27,7 +27,7 @@ namespace KittySDK
     const char * const I_BOLD           = "Kitty.Bold";
     const char * const I_ITALIC         = "Kitty.Italic";
     const char * const I_UNDERLINE      = "Kitty.Underline";
-    const char * const I_STRIKETHROUGH   = "Kitty.Striketrough";
+    const char * const I_STRIKETHROUGH  = "Kitty.Striketrough";
     const char * const I_COLOR          = "Kitty.Color";
     const char * const I_IMAGE          = "Kitty.Image";
     const char * const I_FILE           = "Kitty.File";
@@ -36,6 +36,12 @@ namespace KittySDK
     const char * const I_COPY           = "Kitty.Copy";
     const char * const I_GROUP          = "Kitty.Group";
     const char * const I_SOUND          = "Kitty.Sound";
+    const char * const I_STATUS_ONLINE  = "Kitty.StatusOnline";
+    const char * const I_STATUS_AWAY    = "Kitty.StatusAway";
+    const char * const I_STATUS_FFC     = "Kitty.StatusFFC";
+    const char * const I_STATUS_DND     = "Kitty.StatusDND";
+    const char * const I_STATUS_INVIS   = "Kitty.StatusInvisible";
+    const char * const I_STATUS_OFFLINE = "Kitty.StatusOffline";
 
   }
 
@@ -50,6 +56,8 @@ namespace KittySDK
     const char * const A_ABOUT          = "Kitty.About";
     const char * const A_DEBUG          = "Kitty.Debug";
     const char * const A_PLUGINS        = "Kitty.Plugins";
+    const char * const A_ADD_CONTACT    = "Kitty.AddContact";
+    const char * const A_HISTORY        = "Kitty.History";
   }
 
   namespace Settings
@@ -76,6 +84,7 @@ namespace KittySDK
     const char * const S_CHATWINDOW_GEOMETRY           = "Kitty.Geometries.ChatWindow";
     const char * const S_CHATWINDOW_SENTHISTORY        = "Kitty.ChatWindow.SentHistory";
     const char * const S_CHATWINDOW_COPYSELECTION      = "Kitty.ChatWindow.CopySelection";
+    const char * const S_CHATWINDOW_UNDERLINE_LINKS    = "Kitty.ChatWindow.UnderlineLinks";
 
     const char * const S_CHATWINDOW_SPELLCHECK_ENABLED = "Kitty.ChatWindow.SpellCheck.Enabled";
     const char * const S_CHATWINDOW_SPELLCHECK_DICT    = "Kitty.ChatWindow.SpellCheck.Dictionary";
@@ -127,6 +136,34 @@ namespace KittySDK
     const char * const S_DISPLAY_CHATWINDOW_TABS    = "Display.ChatWindow.Tabs";
     const char * const S_DISPLAY_CHATWINDOW_SMILIES = "Display.ChatWindow.Smilies";
     const char * const S_PLUGINS                    = "Plugins";
+  }
+
+  namespace ContactInfos
+  {
+    const char * const I_NICKNAME        = "ProfileInfos.NickName";
+    const char * const I_FIRSTNAME       = "ProfileInfos.FirstName";
+    const char * const I_MIDDLENAME      = "ProfileInfos.MiddleName";
+    const char * const I_LASTNAME        = "ProfileInfos.LastName";
+    const char * const I_BIRTHDAY        = "ProfileInfos.Birthday";
+    const char * const I_SEX             = "ProfileInfos.Sex";
+    const char * const I_EMAILS          = "ProfileInfos.Emails";
+    const char * const I_PHONES          = "ProfileInfos.Phones";
+    const char * const I_HOME_ADDRESS    = "ProfileInfos.HomeAddress";
+    const char * const I_HOME_CITY       = "ProfileInfos.HomeCity";
+    const char * const I_HOME_POSTALCODE = "ProfileInfos.HomePostalCode";
+    const char * const I_HOME_STATE      = "ProfileInfos.HomeState";
+    const char * const I_HOME_COUNTRY    = "ProfileInfos.HomeCountry";
+    const char * const I_WORK_COMPANY    = "ProfileInfos.WorkCompany";
+    const char * const I_WORK_POSITION   = "ProfileInfos.WorkPosition";
+    const char * const I_WORK_ADDRESS    = "ProfileInfos.WorkAddress";
+    const char * const I_WORK_CITY       = "ProfileInfos.WorkCity";
+    const char * const I_WORK_POSTALCODE = "ProfileInfos.WorkPostalCode";
+    const char * const I_WORK_STATE      = "ProfileInfos.WorkState";
+    const char * const I_WORK_COUNTRY    = "ProfileInfos.WorkCountry";
+    const char * const I_WORK_WEBSITE    = "ProfileInfos.WorkCountry";
+    const char * const I_WEBSITE         = "ProfileInfos.Website";
+    const char * const I_NOTES           = "ProfileInfos.Notes";
+
   }
 
   namespace Toolbars

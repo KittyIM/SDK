@@ -39,15 +39,17 @@ namespace KittySDK
       virtual KittySDK::Contact *newContact(const QString &uid) { return 0; }
 
       virtual KittySDK::Protocol::Status status() const { return KittySDK::Protocol::Offline; }
+      virtual QString description() const { return QString(); }
 
     signals:
-      void statusChanged();
+      void statusChanged(KittySDK::Protocol::Status status, QString description);
       void messageReceived(KittySDK::Message &msg);
 
     public slots:
       virtual void loadSettings(const QMap<QString, QVariant> &settings) { }
       virtual QMap<QString, QVariant> saveSettings() { return QMap<QString, QVariant>(); }
       virtual QMenu *statusMenu() { return 0; }
+      virtual void changeStatus(const KittySDK::Protocol::Status &status, const QString &description) { }
       virtual void sendMessage(const KittySDK::Message &msg) { }
 
     protected:

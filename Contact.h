@@ -35,6 +35,9 @@ namespace KittySDK
       QString description() const { return m_description; }
       void setDescription(const QString &description) { m_description = description; }
 
+      QVariant data(const QString &key) { return m_data.value(key); }
+      void setData(const QString &key, const QVariant &value) { m_data.insert(key, value); }
+
       KittySDK::Account *account() const { return m_account; }
       KittySDK::Protocol *protocol() const { return m_account->protocol(); }
 
@@ -53,6 +56,7 @@ namespace KittySDK
       KittySDK::Protocol::Status m_status;
       QString m_description;
       KittySDK::Account *m_account;
+      QMap<QString, QVariant> m_data;
   };
 }
 
