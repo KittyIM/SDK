@@ -68,6 +68,8 @@ namespace KittySDK
     const char * const S_MAINWINDOW_TRANSPARENCY_VALUE = "Kitty.MainWindow.Transparency.Value";
     const char * const S_MAINWINDOW_GEOMETRY           = "Kitty.Geometries.MainWindow";
     const char * const S_MAINWINDOW_STATE              = "Kitty.MainWindow.State";
+    const char * const S_MAINWINDOW_TB_LOCKS           = "Kitty.MainWindow.ToolBarLocks";
+    const char * const S_MAINWINDOW_TB_STYLES          = "Kitty.MainWindow.ToolBarStyles";
     const char * const S_MAINWINDOW_STARTHIDDEN        = "Kitty.MainWindow.StartHidden";
     const char * const S_MAINWINDOW_CAPTION            = "Kitty.Display.Captions.MainWindow";
     const char * const S_MAINWINDOW_ALWAYS_ON_TOP      = "Kitty.MainWindow.AlwaysOnTop";
@@ -77,6 +79,7 @@ namespace KittySDK
     const char * const S_MAINWINDOW_DOCKING_DISTANCE   = "Kitty.MainWindow.Docking.Distance";
 
     const char * const S_DEBUGWINDOW_GEOMETRY          = "Kitty.Geometries.DebugWindow";
+    const char * const S_CONTACTWINDOW_GEOMETRY        = "Kitty.Geometries.ContactWindow";
 
     const char * const S_SETTINGSWINDOW_GEOMETRY       = "Kitty.Geometries.SettingsWindow";
 
@@ -140,30 +143,29 @@ namespace KittySDK
 
   namespace ContactInfos
   {
-    const char * const I_NICKNAME        = "ProfileInfos.NickName";
-    const char * const I_FIRSTNAME       = "ProfileInfos.FirstName";
-    const char * const I_MIDDLENAME      = "ProfileInfos.MiddleName";
-    const char * const I_LASTNAME        = "ProfileInfos.LastName";
-    const char * const I_BIRTHDAY        = "ProfileInfos.Birthday";
-    const char * const I_SEX             = "ProfileInfos.Sex";
-    const char * const I_EMAILS          = "ProfileInfos.Emails";
-    const char * const I_PHONES          = "ProfileInfos.Phones";
-    const char * const I_HOME_ADDRESS    = "ProfileInfos.HomeAddress";
-    const char * const I_HOME_CITY       = "ProfileInfos.HomeCity";
-    const char * const I_HOME_POSTALCODE = "ProfileInfos.HomePostalCode";
-    const char * const I_HOME_STATE      = "ProfileInfos.HomeState";
-    const char * const I_HOME_COUNTRY    = "ProfileInfos.HomeCountry";
-    const char * const I_WORK_COMPANY    = "ProfileInfos.WorkCompany";
-    const char * const I_WORK_POSITION   = "ProfileInfos.WorkPosition";
-    const char * const I_WORK_ADDRESS    = "ProfileInfos.WorkAddress";
-    const char * const I_WORK_CITY       = "ProfileInfos.WorkCity";
-    const char * const I_WORK_POSTALCODE = "ProfileInfos.WorkPostalCode";
-    const char * const I_WORK_STATE      = "ProfileInfos.WorkState";
-    const char * const I_WORK_COUNTRY    = "ProfileInfos.WorkCountry";
-    const char * const I_WORK_WEBSITE    = "ProfileInfos.WorkCountry";
-    const char * const I_WEBSITE         = "ProfileInfos.Website";
-    const char * const I_NOTES           = "ProfileInfos.Notes";
-
+    const char * const I_NICKNAME        = "NickName";
+    const char * const I_FIRSTNAME       = "FirstName";
+    const char * const I_MIDDLENAME      = "MiddleName";
+    const char * const I_LASTNAME        = "LastName";
+    const char * const I_BIRTHDAY        = "Birthday";
+    const char * const I_SEX             = "Sex";
+    const char * const I_EMAILS          = "Emails";
+    const char * const I_PHONES          = "Phones";
+    const char * const I_HOME_ADDRESS    = "HomeAddress";
+    const char * const I_HOME_CITY       = "HomeCity";
+    const char * const I_HOME_POSTALCODE = "HomePostalCode";
+    const char * const I_HOME_STATE      = "HomeState";
+    const char * const I_HOME_COUNTRY    = "HomeCountry";
+    const char * const I_WORK_COMPANY    = "WorkCompany";
+    const char * const I_WORK_POSITION   = "WorkPosition";
+    const char * const I_WORK_ADDRESS    = "WorkAddress";
+    const char * const I_WORK_CITY       = "WorkCity";
+    const char * const I_WORK_POSTALCODE = "WorkPostalCode";
+    const char * const I_WORK_STATE      = "WorkState";
+    const char * const I_WORK_COUNTRY    = "WorkCountry";
+    const char * const I_WORK_WEBSITE    = "WorkWebsite";
+    const char * const I_WEBSITE         = "Website";
+    const char * const I_NOTES           = "Notes";
   }
 
   namespace Toolbars
