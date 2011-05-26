@@ -118,8 +118,11 @@ namespace KittySDK
     const char * const S_ROSTER_GROUPS_AS_TABS         = "Kitty.Roster.GroupsAsTabs";
     const char * const S_ROSTER_GROUPS_ON_MAIN         = "Kitty.Roster.GroupsOnMain";
     const char * const S_ROSTER_TIPS                   = "Kitty.Roster.Tips.Enabled";
-    const char * const S_ROSTER_TIPS_DELAY             = "Kitty.Roster.Tips.Delay";
     const char * const S_ROSTER_TIPS_IP                = "Kitty.Roster.Tips.IP";
+    const char * const S_ROSTER_TIPS_EMAIL             = "Kitty.Roster.Tips.Email";
+    const char * const S_ROSTER_TIPS_PHONE             = "Kitty.Roster.Tips.Phone";
+    const char * const S_ROSTER_TIPS_DESCRIPTION       = "Kitty.Roster.Tips.Description";
+
 
     //const char * const S_                = "Kitty.";
   }
@@ -164,7 +167,7 @@ namespace KittySDK
     const char * const I_WORK_STATE      = "WorkState";
     const char * const I_WORK_COUNTRY    = "WorkCountry";
     const char * const I_WORK_WEBSITE    = "WorkWebsite";
-    const char * const I_WEBSITE         = "Website";
+    const char * const I_HOMEPAGE        = "Homepage";
     const char * const I_NOTES           = "Notes";
   }
 

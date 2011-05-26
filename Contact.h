@@ -47,6 +47,7 @@ namespace KittySDK
 
     public slots:
       virtual void prepareContextMenu(QMenu *menu) { }
+      virtual QString toolTip() { return QString(); }
       virtual void loadSettings(const QMap<QString, QVariant> &settings) { }
       virtual QMap<QString, QVariant> saveSettings() { return QMap<QString, QVariant>(); }
 
