@@ -10,6 +10,7 @@ class QAction;
 namespace KittySDK
 {
   class SettingPage;
+  class Contact;
   class Account;
 
   class PluginCore: public QObject
@@ -25,6 +26,10 @@ namespace KittySDK
       virtual QString profileName() = 0;
       virtual QString kittyDir() = 0;
       virtual QString profilesDir() = 0;
+      virtual QString avatarPath(Contact *contact) = 0;
+
+      virtual QVariant jsonParse(const QString &json) = 0;
+      virtual QString jsonStringify(const QVariant &json, int indent = 0) = 0;
 
       virtual void addSettingPage(SettingPage *page, const QString &parent) = 0;
       virtual void addToolbarAction(const QString &tb, QAction *action) = 0;

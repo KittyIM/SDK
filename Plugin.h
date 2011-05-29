@@ -79,7 +79,7 @@ namespace KittySDK
 }
 
 #define KITTY_PLUGIN(PLUGINCLASS) \
-Q_EXTERN_C Q_DECL_EXPORT QObject *inst(PluginCore *core) \
+Q_EXTERN_C Q_DECL_EXPORT QObject *inst(KittySDK::PluginCore *core) \
 { \
   static QPointer<QObject> m_inst; \
   if(!m_inst) { \

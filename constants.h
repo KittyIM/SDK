@@ -173,9 +173,10 @@ namespace KittySDK
 
   namespace Toolbars
   {
-    const char * const TB_MAIN = "Toolbars.Main";
+    const char * const TB_MAIN     = "Toolbars.Main";
     const char * const TB_NETWORKS = "Toolbars.Networks";
-    const char * const TB_PLUGINS = "Toolbars.Plugins";
+    const char * const TB_PLUGINS  = "Toolbars.Plugins";
+    const char * const TB_CHAT     = "Toolbars.Chat";
   }
 }
 
