@@ -44,6 +44,7 @@ namespace KittySDK
     signals:
       void statusChanged(KittySDK::Protocol::Status status, QString description);
       void messageReceived(KittySDK::Message &msg);
+      void contactAdded(KittySDK::Contact *contact);
 
     public slots:
       virtual void loadSettings(const QMap<QString, QVariant> &settings) { }
