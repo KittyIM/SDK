@@ -5,6 +5,8 @@
 
 namespace KittySDK
 {
+  class PluginCore;
+
   class SettingPage: public QWidget
   {
     Q_OBJECT
@@ -12,7 +14,7 @@ namespace KittySDK
     Q_PROPERTY(QString icon READ icon WRITE setIcon)
 
     public:
-      SettingPage(QWidget *parent = 0): QWidget(parent) { }
+      SettingPage(PluginCore *core, QWidget *parent = 0): QWidget(parent), m_core(core) { }
 
       QString name() { return m_name; }
       void setName(const QString &name) { m_name = name; }
@@ -24,6 +26,7 @@ namespace KittySDK
       virtual void reset() { }
 
     private:
+      PluginCore *m_core;
       QString m_name;
       QString m_icon;
   };

@@ -36,6 +36,8 @@ namespace KittySDK
     const char * const I_COPY           = "Kitty.Copy";
     const char * const I_GROUP          = "Kitty.Group";
     const char * const I_SOUND          = "Kitty.Sound";
+    const char * const I_ADD            = "Kitty.Add";
+    const char * const I_EDIT           = "Kitty.Edit";
     const char * const I_STATUS_ONLINE  = "Kitty.StatusOnline";
     const char * const I_STATUS_AWAY    = "Kitty.StatusAway";
     const char * const I_STATUS_FFC     = "Kitty.StatusFFC";
@@ -85,8 +87,12 @@ namespace KittySDK
 
     const char * const S_CHATWINDOW_CAPTION            = "Kitty.Display.Captions.ChatWindow";
     const char * const S_CHATWINDOW_GEOMETRY           = "Kitty.Geometries.ChatWindow";
+    const char * const S_CHATWINDOW_GROUPING           = "Kitty.ChatWindow.Grouping";
     const char * const S_CHATWINDOW_SENTHISTORY        = "Kitty.ChatWindow.SentHistory";
     const char * const S_CHATWINDOW_COPYSELECTION      = "Kitty.ChatWindow.CopySelection";
+    const char * const S_CHATWINDOW_STATUS_CHANGES     = "Kitty.ChatWindow.StatusChanges";
+    const char * const S_CHATWINDOW_YOUTUBE_LINKS      = "Kitty.ChatWindow.YouTubeLinks";
+    const char * const S_CHATWINDOW_FORMATTING         = "Kitty.ChatWindow.Formatting";
     const char * const S_CHATWINDOW_UNDERLINE_LINKS    = "Kitty.ChatWindow.UnderlineLinks";
 
     const char * const S_CHATWINDOW_SPELLCHECK_ENABLED = "Kitty.ChatWindow.SpellCheck.Enabled";
