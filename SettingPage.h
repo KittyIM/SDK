@@ -16,10 +16,12 @@ namespace KittySDK
     public:
       SettingPage(PluginCore *core, QWidget *parent = 0): QWidget(parent), m_core(core) { }
 
-      QString name() { return m_name; }
+      PluginCore *core() const { return m_core; }
+
+      QString name() const { return m_name; }
       void setName(const QString &name) { m_name = name; }
 
-      QString icon() { return m_icon; }
+      QString icon() const { return m_icon; }
       void setIcon(const QString &icon) { m_icon = icon; }
 
       virtual void apply() { }
