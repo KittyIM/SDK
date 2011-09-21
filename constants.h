@@ -36,6 +36,8 @@ namespace KittySDK
     const char * const I_COPY           = "Kitty.Copy";
     const char * const I_GROUP          = "Kitty.Group";
     const char * const I_SOUND          = "Kitty.Sound";
+    const char * const I_PRINTER        = "Kitty.Printer";
+    const char * const I_FILTER         = "Kitty.Filter";
     const char * const I_ADD            = "Kitty.Add";
     const char * const I_EDIT           = "Kitty.Edit";
     const char * const I_STATUS_ONLINE  = "Kitty.StatusOnline";
@@ -95,6 +97,9 @@ namespace KittySDK
     const char * const S_CHATWINDOW_FORMATTING         = "Kitty.ChatWindow.Formatting";
     const char * const S_CHATWINDOW_UNDERLINE_LINKS    = "Kitty.ChatWindow.UnderlineLinks";
 
+    const char * const S_CHATWINDOW_CLEAR_MESSAGES     = "Kitty.ChatWindow.Clear.Messages";
+    const char * const S_CHATWINDOW_CLEAR_INTERVAL     = "Kitty.ChatWindow.Clear.Interval";
+
     const char * const S_CHATWINDOW_SPELLCHECK_ENABLED = "Kitty.ChatWindow.SpellCheck.Enabled";
     const char * const S_CHATWINDOW_SPELLCHECK_DICT    = "Kitty.ChatWindow.SpellCheck.Dictionary";
     const char * const S_CHATWINDOW_TABBAR_HIDE_ONE    = "Kitty.ChatWindow.TabBar.HideIfOneTab";
@@ -105,6 +110,10 @@ namespace KittySDK
     const char * const S_CHATTAB_CAPTION               = "Kitty.Display.Captions.ChatTab";
 
     const char * const S_PROFILE_PASSWORD              = "Profile.Password";
+
+    const char * const S_HISTORYWINDOW_GEOMETRY        = "Kitty.HistoryWindow.Geometry";
+    const char * const S_HISTORYWINDOW_COLUMNS         = "Kitty.HistoryWindow.Columns";
+    const char * const S_HISTORYWINDOW_FILTERS         = "Kitty.HistoryWindow.Filters";
 
     const char * const S_ICON_THEME                    = "Profile.Themes.Icon";
     const char * const S_CHAT_THEME                    = "Profile.Themes.Chat.Name";
