@@ -126,6 +126,12 @@ namespace KittySDK
     const char * const S_PROXY_USERNAME                = "Kitty.Proxy.Auth.Username";
     const char * const S_PROXY_PASSWORD                = "Kitty.Proxy.Auth.Password";
 
+    const char * const S_HISTORY_ENABLED               = "Kitty.History.Enabled";
+    const char * const S_HISTORY_STRANGERS             = "Kitty.History.Strangers";
+    const char * const S_HISTORY_EXPIRE_DAYS           = "Kitty.History.ExpireDays";
+    const char * const S_HISTORY_UNDERLINE_LINKS       = "Kitty.History.UnderlineLinks";
+    const char * const S_HISTORY_FORMATTING            = "Kitty.History.Formatting";
+
     const char * const S_ROSTER_THEME                  = "Profile.Themes.Roster";
     const char * const S_ROSTER_STATUS_DESCRIPTION     = "Kitty.Roster.StatusDescription";
     const char * const S_ROSTER_AVATARS                = "Kitty.Roster.Avatars";
