@@ -39,7 +39,7 @@ namespace KittySDK
       virtual void setData(const QString &key, const QVariant &value) { m_data.insert(key, value); }
 
       KittySDK::Account *account() const { return m_account; }
-      KittySDK::Protocol *protocol() const { return m_account->protocol(); }
+      KittySDK::Protocol *protocol() const { if(m_account) { return m_account->protocol(); } return 0; }
 
     signals:
       void statusChanged(KittySDK::Protocol::Status status, const QString &description);

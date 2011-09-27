@@ -24,6 +24,7 @@ namespace KittySDK
       QString icon() const { return m_icon; }
       void setIcon(const QString &icon) { m_icon = icon; }
 
+      virtual void retranslate() { }
       virtual void apply() { }
       virtual void reset() { }
 
