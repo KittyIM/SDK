@@ -38,6 +38,7 @@ namespace KittySDK
     const char * const I_SOUND          = "Kitty.Sound";
     const char * const I_PRINTER        = "Kitty.Printer";
     const char * const I_FILTER         = "Kitty.Filter";
+    const char * const I_SEARCH         = "Kitty.Search";
     const char * const I_ADD            = "Kitty.Add";
     const char * const I_EDIT           = "Kitty.Edit";
     const char * const I_STATUS_ONLINE  = "Kitty.StatusOnline";
