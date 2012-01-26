@@ -42,6 +42,9 @@ namespace KittySDK
 		const char * const I_ADD			= "Kitty.Add";
 		const char * const I_EDIT			= "Kitty.Edit";
 		const char * const I_URL			= "Kitty.URL";
+		const char * const I_CURSOR			= "Kitty.Cursor";
+		const char * const I_PAINTBRUSH		= "Kitty.Paintbrush";
+		const char * const I_ERASE			= "Kitty.Erase";
 		const char * const I_STATUS_ONLINE	= "Kitty.StatusOnline";
 		const char * const I_STATUS_AWAY	= "Kitty.StatusAway";
 		const char * const I_STATUS_FFC		= "Kitty.StatusFFC";
