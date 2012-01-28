@@ -27,7 +27,7 @@ namespace KittySDK
 
 	class Protocol: public Plugin
 	{
-		Q_OBJECT
+			Q_OBJECT
 
 		public:
 			enum Status
@@ -42,20 +42,22 @@ namespace KittySDK
 
 			enum Ability
 			{
-				TextBold         = 0x01,
-				TextItalics      = 0x02,
-				TextUnderline    = 0x04,
-				TextStrikethrough = 0x08,
-				TextColor        = 0x10,
-				BackgroundColor  = 0x20,
+				TextBold			= 0x01,
+				TextItalics			= 0x02,
+				TextUnderline		= 0x04,
+				TextStrikethrough	= 0x08,
 
-				SendImages       = 0x100,
-				SendFiles        = 0x200,
+				TextColor			= 0x10,
+				BackgroundColor		= 0x20,
 
-				ChangeStatus     = 0x1000,
-				BlockContacts    = 0x2000,
+				SendImages			= 0x100,
+				SendFiles			= 0x200,
 
-				TextStandard     = TextBold | TextItalics | TextUnderline
+				ChangeStatus		= 0x1000,
+				BlockContacts		= 0x2000,
+				TypingNotification	= 0x4000,
+
+				TextStandard		= TextBold | TextItalics | TextUnderline
 			};
 			Q_DECLARE_FLAGS(Abilities, Ability)
 

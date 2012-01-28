@@ -44,6 +44,7 @@ namespace KittySDK
 		signals:
 			void statusChanged(KittySDK::Protocol::Status status, QString description);
 			void messageReceived(KittySDK::Message &msg);
+			void typingNotifyReceived(KittySDK::Contact *contact, bool typing, const int &length);
 			void contactAdded(KittySDK::Contact *contact);
 
 		public slots:
@@ -52,6 +53,7 @@ namespace KittySDK
 			virtual QMenu *statusMenu() { return 0; }
 			virtual void changeStatus(const KittySDK::Protocol::Status &status, const QString &description) { }
 			virtual void sendMessage(const KittySDK::Message &msg) { }
+			virtual void sendTypingNotify(KittySDK::Contact *contact, bool typing, const int &length) { }
 
 		protected:
 			QString m_uid;
