@@ -3,6 +3,8 @@
 
 #include "Plugin.h"
 
+class QDialog;
+
 namespace KittySDK
 {
 	class ProtocolInfo: public PluginInfo
@@ -27,7 +29,7 @@ namespace KittySDK
 
 	class Protocol: public Plugin
 	{
-			Q_OBJECT
+		Q_OBJECT
 
 		public:
 			enum Status
@@ -71,7 +73,7 @@ namespace KittySDK
 
 			virtual QString statusIcon(KittySDK::Protocol::Status status) { return ""; }
 			virtual Account *newAccount(const QString &uid) = 0;
-			virtual QWidget *editWindow(Account *account = 0) = 0;
+			virtual QDialog *editDialog(Account *account = 0) = 0;
 
 			enum { Type = 2 };
 			int type() const { return Type; }

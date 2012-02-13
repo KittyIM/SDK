@@ -7,7 +7,6 @@
 #include <QtCore/QtPlugin>
 
 class QString;
-class QWidget;
 
 namespace KittySDK
 {
