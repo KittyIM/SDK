@@ -16,12 +16,12 @@ namespace KittySDK
 	class IPluginInfo
 	{
 		public:
-			IPluginInfo(const QString &name = "", const QString &version = "", const QString &author = "", const QString &email = "", const QString &www = ""):
+			IPluginInfo(const QString &name = "", const QString &version = "", const QString &author = "", const QString &email = "", const QString &url = ""):
 				m_name(name),
 				m_version(version),
 				m_author(author),
 				m_email(email),
-				m_www(www)
+				m_url(url)
 			{ }
 
 			QString name() const { return m_name; }
@@ -36,15 +36,15 @@ namespace KittySDK
 			QString email() const { return m_email; }
 			void setEmail(const QString &email) { m_email = email; }
 
-			QString www() const { return m_www; }
-			void setWWW(const QString &www) { m_www = www; }
+			QString url() const { return m_url; }
+			void setURL(const QString &url) { m_url = url; }
 
 		private:
 			QString m_name;
 			QString m_version;
 			QString m_author;
 			QString m_email;
-			QString m_www;
+			QString m_url;
 	};
 
 	class IPlugin: public QObject

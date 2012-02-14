@@ -10,8 +10,8 @@ namespace KittySDK
 	class IProtocolInfo: public IPluginInfo
 	{
 		public:
-			IProtocolInfo(const QString &name = "", const QString &version = "", const QString &author = "", const QString &email = "", const QString &www = "", const QString &protoName = "", const QString &protoIcon = ""):
-				IPluginInfo(name, version, author, email, www),
+			IProtocolInfo(const QString &name = "", const QString &version = "", const QString &author = "", const QString &email = "", const QString &url = "", const QString &protoName = "", const QString &protoIcon = ""):
+				IPluginInfo(name, version, author, email, url),
 				m_protoName(protoName),
 				m_protoIcon(protoIcon)
 			{ }
@@ -64,7 +64,7 @@ namespace KittySDK
 			Q_DECLARE_FLAGS(Abilities, Ability)
 
 		public:
-			IProtocol(IPluginCore *core): Plugin(core) { }
+			IProtocol(IPluginCore *core): IPlugin(core) { }
 
 			IProtocolInfo *protoInfo() const { return static_cast<IProtocolInfo*>(m_info); }
 
@@ -72,8 +72,8 @@ namespace KittySDK
 			void setAbilities(const Abilities &abilities) { m_abilities = abilities; }
 
 			virtual QString statusIcon(IProtocol::Status status) { return ""; }
-			virtual Account *newAccount(const QString &uid) = 0;
-			virtual QDialog *editDialog(Account *account = 0) = 0;
+			virtual IAccount *newAccount(const QString &uid) = 0;
+			virtual QDialog *editDialog(IAccount *account = 0) = 0;
 
 			enum { Type = 2 };
 			int type() const { return Type; }

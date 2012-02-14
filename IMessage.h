@@ -34,7 +34,7 @@ namespace KittySDK
 		public:
 			IMessage(IContact *from, IContact *to, const QString &body = "", const QDateTime &timeStamp = QDateTime::currentDateTime(), const Type &type = Private, const Direction &dir = Outgoing): QObject(0),
 				m_from(from),
-				m_to(QList<Contact*>() << to),
+				m_to(QList<IContact*>() << to),
 				m_chat(0),
 				m_body(body),
 				m_timeStamp(timeStamp),
