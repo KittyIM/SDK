@@ -1,15 +1,15 @@
-#ifndef SDKMESSAGE_H
-#define SDKMESSAGE_H
+#ifndef SDK_IMESSAGE_H
+#define SDK_IMESSAGE_H
 
 #include <QtCore/QDateTime>
 #include <QtCore/QObject>
 
 namespace KittySDK
 {
-	class Contact;
-	class Chat;
+	class IContact;
+	class IChat;
 
-	class Message: public QObject
+	class IMessage: public QObject
 	{
 		Q_OBJECT
 		Q_PROPERTY(Type type READ type WRITE setType)
@@ -32,7 +32,7 @@ namespace KittySDK
 			};
 
 		public:
-			Message(Contact *from, Contact *to, const QString &body = "", const QDateTime &timeStamp = QDateTime::currentDateTime(), const Type &type = Private, const Direction &dir = Outgoing): QObject(0),
+			IMessage(IContact *from, IContact *to, const QString &body = "", const QDateTime &timeStamp = QDateTime::currentDateTime(), const Type &type = Private, const Direction &dir = Outgoing): QObject(0),
 				m_from(from),
 				m_to(QList<Contact*>() << to),
 				m_chat(0),
@@ -42,7 +42,7 @@ namespace KittySDK
 				m_direction(dir)
 			{ }
 
-			Message(Contact *from, const QList<Contact*> &to, const QString &body = "", const QDateTime &timeStamp = QDateTime::currentDateTime(), const Type &type = Private, const Direction &dir = Outgoing): QObject(0),
+			IMessage(IContact *from, const QList<IContact*> &to, const QString &body = "", const QDateTime &timeStamp = QDateTime::currentDateTime(), const Type &type = Private, const Direction &dir = Outgoing): QObject(0),
 				m_from(from),
 				m_to(to),
 				m_chat(0),
@@ -52,12 +52,12 @@ namespace KittySDK
 				m_direction(dir)
 			{ }
 
-			Contact *from() const { return m_from; }
-			const QList<Contact*> &to() const { return m_to; }
-			Contact *singleTo() const { return m_to.first(); }
+			IContact *from() const { return m_from; }
+			const QList<IContact*> &to() const { return m_to; }
+			IContact *singleTo() const { return m_to.first(); }
 
-			Chat *chat() const { return m_chat; }
-			void setChat(Chat *chat) { m_chat = chat; }
+			IChat *chat() const { return m_chat; }
+			void setChat(IChat *chat) { m_chat = chat; }
 
 			QString body() const { return m_body; }
 			void setBody(const QString &body) { m_body = body; }
@@ -72,9 +72,9 @@ namespace KittySDK
 			void setDirection(const Direction &dir) { m_direction = dir; }
 
 		private:
-			Contact *m_from;
-			QList<Contact*> m_to;
-			Chat *m_chat;
+			IContact *m_from;
+			QList<IContact*> m_to;
+			IChat *m_chat;
 			QString m_body;
 			QDateTime m_timeStamp;
 			Type m_type;
@@ -82,4 +82,4 @@ namespace KittySDK
 	};
 }
 
-#endif // SDKMESSAGE_H
+#endif // SDK_IMESSAGE_H

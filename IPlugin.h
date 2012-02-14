@@ -1,7 +1,7 @@
-#ifndef SDKPLUGIN_H
-#define SDKPLUGIN_H
+#ifndef SDK_IPLUGIN_H
+#define SDK_IPLUGIN_H
 
-#include "PluginCore.h"
+#include "IPluginCore.h"
 
 #include <QtCore/QObject>
 #include <QtCore/QtPlugin>
@@ -10,13 +10,13 @@ class QString;
 
 namespace KittySDK
 {
-	class Account;
-	class Message;
+	class IAccount;
+	class IMessage;
 
-	class PluginInfo
+	class IPluginInfo
 	{
 		public:
-			PluginInfo(const QString &name = "", const QString &version = "", const QString &author = "", const QString &email = "", const QString &www = ""):
+			IPluginInfo(const QString &name = "", const QString &version = "", const QString &author = "", const QString &email = "", const QString &www = ""):
 				m_name(name),
 				m_version(version),
 				m_author(author),
@@ -47,12 +47,12 @@ namespace KittySDK
 			QString m_www;
 	};
 
-	class Plugin: public QObject
+	class IPlugin: public QObject
 	{
 		Q_OBJECT
 
 		public:
-			Plugin(PluginCore *core): QObject(0), m_info(0), m_core(core) { }
+			IPlugin(IPluginCore *core): QObject(0), m_info(0), m_core(core) { }
 
 			enum { Type = 1 };
 			virtual int type() const { return Type; }
@@ -61,24 +61,24 @@ namespace KittySDK
 			virtual void load() { }
 			virtual void unload() { }
 
-			PluginInfo *info() const { return m_info; }
-			PluginCore *core() const { return m_core; }
+			IPluginInfo *info() const { return m_info; }
+			IPluginCore *core() const { return m_core; }
 
 		public slots:
 			virtual void applySettings() { }
 			virtual void updateIcons() { }
-			virtual void receiveMessage(const Message &msg) { }
-			virtual void processMessage(Message &msg) { }
+			virtual void receiveMessage(const IMessage &msg) { }
+			virtual void processMessage(IMessage &msg) { }
 			virtual void execAction(const QString &name, const QMap<QString, QVariant> &args) { }
 
 		protected:
-			PluginInfo *m_info;
-			PluginCore *m_core;
+			IPluginInfo *m_info;
+			IPluginCore *m_core;
 	};
 }
 
 #define KITTY_PLUGIN(PLUGINCLASS) \
-	Q_EXTERN_C Q_DECL_EXPORT QObject *inst(KittySDK::PluginCore *core) \
+	Q_EXTERN_C Q_DECL_EXPORT QObject *inst(KittySDK::IPluginCore *core) \
 { \
 	static QPointer<QObject> m_inst; \
 	if(!m_inst) { \
@@ -87,4 +87,4 @@ namespace KittySDK
 	return m_inst; \
 	}
 
-#endif // SDKPLUGIN_H
+#endif // SDK_IPLUGIN_H

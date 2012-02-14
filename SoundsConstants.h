@@ -5,18 +5,18 @@ namespace KittySDK
 {
   namespace Sounds
   {
-    const char * const S_MSG_RECV        = "Sounds.MessageReceived";
-    const char * const S_MSG_RECV_FIRST  = "Sounds.MessageReceivedFirst";
-    const char * const S_MSG_SENT        = "Sounds.MessageSent";
-    const char * const S_CONTACT_AVAIL   = "Sounds.ContactAvailable";
-    const char * const S_CONTACT_UNAVAIL = "Sounds.ContactUnavailable";
-    const char * const S_ERROR           = "Sounds.Error";
-    const char * const S_FILE_REQ        = "Sounds.FileTransferRequest";
+    const char S_MSG_RECV[]				= "Sounds.MessageReceived";
+    const char S_MSG_RECV_FIRST[]		= "Sounds.MessageReceivedFirst";
+    const char S_MSG_SENT[] 			= "Sounds.MessageSent";
+    const char S_CONTACT_AVAIL[]		= "Sounds.ContactAvailable";
+    const char S_CONTACT_UNAVAIL[]		= "Sounds.ContactUnavailable";
+    const char S_ERROR[]				= "Sounds.Error";
+    const char S_FILE_REQ[]				= "Sounds.FileTransferRequest";
   }
 
   namespace Icons
   {
-    const char * const I_SOUND_MUTE    = "Sounds.Mute";
+    const char I_SOUND_MUTE[]			= "Sounds.Mute";
   }
 }
 

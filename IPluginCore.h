@@ -1,5 +1,5 @@
-#ifndef SDKPLUGINCORE_H
-#define SDKPLUGINCORE_H
+#ifndef SDK_IPLUGINCORE_H
+#define SDK_IPLUGINCORE_H
 
 #include <QtCore/QVariant>
 #include <QtCore/QObject>
@@ -10,11 +10,11 @@ class QAction;
 
 namespace KittySDK
 {
-	class SettingPage;
-	class Contact;
-	class Account;
+	class ISettingsPage;
+	class IContact;
+	class IAccount;
 
-	class PluginCore: public QObject
+	class IPluginCore: public QObject
 	{
 		Q_OBJECT
 
@@ -27,26 +27,26 @@ namespace KittySDK
 			virtual QString profileName() = 0;
 			virtual QString kittyDir() = 0;
 			virtual QString profilesDir() = 0;
-			virtual QString avatarPath(Contact *contact) = 0;
+			virtual QString avatarPath(IContact *contact) = 0;
 
 			virtual int contactCount() = 0;
-			virtual Contact *contact(const int &id) = 0;
-			virtual QList<Contact*> contacts(const QString &account, const QString &protocol) = 0;
-			virtual QList<Contact*> contacts(const QString &protocol) = 0;
+			virtual IContact *contact(const int &id) = 0;
+			virtual QList<IContact*> contacts(const QString &account, const QString &protocol) = 0;
+			virtual QList<IContact*> contacts(const QString &protocol) = 0;
 
 			virtual QStringList plugins() = 0;
 
 			virtual QVariant jsonParse(const QString &json) = 0;
 			virtual QString jsonStringify(const QVariant &json, int indent = 0) = 0;
 
-			virtual void addSettingPage(SettingPage *page, const QString &parent) = 0;
-			virtual void removeSettingPage(SettingPage *page) = 0;
+			virtual void addSettingPage(ISettingsPage *page, const QString &parent) = 0;
+			virtual void removeSettingPage(ISettingsPage *page) = 0;
 
 			virtual void addToolbarAction(const QString &tb, QAction *action) = 0;
 			virtual void removeToolbarAction(const QString &tb, QAction *action) = 0;
 			virtual QToolButton *buttonForAction(const QString &tb, QAction *action) = 0;
 
-			virtual void addAccount(Account *account) = 0;
+			virtual void addAccount(IAccount *account) = 0;
 
 			virtual QPixmap icon(const QString &id) = 0;
 			virtual void addIcon(const QString &id, const QPixmap &pixmap, bool replace = true) = 0;
@@ -57,4 +57,4 @@ namespace KittySDK
 	};
 }
 
-#endif // SDKPLUGINCORE_H
+#endif // SDK_IPLUGINCORE_H

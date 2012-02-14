@@ -1,22 +1,22 @@
-#ifndef SDKSETTINGPAGE_H
-#define SDKSETTINGPAGE_H
+#ifndef SDK_ISETTINGSPAGE_H
+#define SDK_ISETTINGSPAGE_H
 
 #include <QtGui/QWidget>
 
 namespace KittySDK
 {
-	class PluginCore;
+	class IPluginCore;
 
-	class SettingPage: public QWidget
+	class ISettingsPage: public QWidget
 	{
 		Q_OBJECT
 		Q_PROPERTY(QString name READ name WRITE setName)
 		Q_PROPERTY(QString icon READ icon WRITE setIcon)
 
 		public:
-			SettingPage(PluginCore *core, QWidget *parent = 0): QWidget(parent), m_core(core) { }
+			ISettingsPage(IPluginCore *core, QWidget *parent = 0): QWidget(parent), m_core(core) { }
 
-			PluginCore *core() const { return m_core; }
+			IPluginCore *core() const { return m_core; }
 
 			QString name() const { return m_name; }
 			void setName(const QString &name) { m_name = name; }
@@ -29,10 +29,10 @@ namespace KittySDK
 			virtual void reset() { }
 
 		private:
-			PluginCore *m_core;
+			IPluginCore *m_core;
 			QString m_name;
 			QString m_icon;
 	};
 }
 
-#endif // SDKSETTINGPAGE_H
+#endif // SDK_SETTINGSPAGE_H

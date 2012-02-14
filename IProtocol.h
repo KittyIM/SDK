@@ -1,17 +1,17 @@
-#ifndef SDKPROTOCOL_H
-#define SDKPROTOCOL_H
+#ifndef SDK_IPROTOCOL_H
+#define SDK_IPROTOCOL_H
 
-#include "Plugin.h"
+#include "IPlugin.h"
 
 class QDialog;
 
 namespace KittySDK
 {
-	class ProtocolInfo: public PluginInfo
+	class IProtocolInfo: public IPluginInfo
 	{
 		public:
-			ProtocolInfo(const QString &name = "", const QString &version = "", const QString &author = "", const QString &email = "", const QString &www = "", const QString &protoName = "", const QString &protoIcon = ""):
-				PluginInfo(name, version, author, email, www),
+			IProtocolInfo(const QString &name = "", const QString &version = "", const QString &author = "", const QString &email = "", const QString &www = "", const QString &protoName = "", const QString &protoIcon = ""):
+				IPluginInfo(name, version, author, email, www),
 				m_protoName(protoName),
 				m_protoIcon(protoIcon)
 			{ }
@@ -27,7 +27,7 @@ namespace KittySDK
 			QString m_protoIcon;
 	};
 
-	class Protocol: public Plugin
+	class IProtocol: public IPlugin
 	{
 		Q_OBJECT
 
@@ -64,14 +64,14 @@ namespace KittySDK
 			Q_DECLARE_FLAGS(Abilities, Ability)
 
 		public:
-			Protocol(PluginCore *core): Plugin(core) { }
+			IProtocol(IPluginCore *core): Plugin(core) { }
 
-			ProtocolInfo *protoInfo() const { return static_cast<ProtocolInfo*>(m_info); }
+			IProtocolInfo *protoInfo() const { return static_cast<IProtocolInfo*>(m_info); }
 
 			Abilities abilities() const { return m_abilities; }
 			void setAbilities(const Abilities &abilities) { m_abilities = abilities; }
 
-			virtual QString statusIcon(KittySDK::Protocol::Status status) { return ""; }
+			virtual QString statusIcon(IProtocol::Status status) { return ""; }
 			virtual Account *newAccount(const QString &uid) = 0;
 			virtual QDialog *editDialog(Account *account = 0) = 0;
 
@@ -82,7 +82,7 @@ namespace KittySDK
 			Abilities m_abilities;
 	};
 
-	Q_DECLARE_OPERATORS_FOR_FLAGS(Protocol::Abilities)
+	Q_DECLARE_OPERATORS_FOR_FLAGS(IProtocol::Abilities)
 }
 
-#endif // SDKPROTOCOL_H
+#endif // SDK_IPROTOCOL_H
