@@ -16,16 +16,11 @@ namespace KittySDK
 	class IPluginInfo
 	{
 		public:
-			IPluginInfo(const QString &name = "", const QString &version = "", const QString &author = "", const QString &email = "", const QString &url = ""):
-				m_name(name),
-				m_version(version),
-				m_author(author),
-				m_email(email),
-				m_url(url)
-			{ }
-
 			QString name() const { return m_name; }
 			void setName(const QString &name) { m_name = name; }
+
+			QString id() const { return m_id; }
+			void setId(const QString &id) { m_id = id; }
 
 			QString version() const { return m_version; }
 			void setVersion(const QString &version) { m_version = version; }
@@ -41,6 +36,7 @@ namespace KittySDK
 
 		private:
 			QString m_name;
+			QString m_id;
 			QString m_version;
 			QString m_author;
 			QString m_email;

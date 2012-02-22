@@ -10,12 +10,6 @@ namespace KittySDK
 	class IProtocolInfo: public IPluginInfo
 	{
 		public:
-			IProtocolInfo(const QString &name = "", const QString &version = "", const QString &author = "", const QString &email = "", const QString &url = "", const QString &protoName = "", const QString &protoIcon = ""):
-				IPluginInfo(name, version, author, email, url),
-				m_protoName(protoName),
-				m_protoIcon(protoIcon)
-			{ }
-
 			QString protoName() const { return m_protoName; }
 			void setProtoName(const QString &protoName) { m_protoName = protoName; }
 
