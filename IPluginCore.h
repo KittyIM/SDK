@@ -48,6 +48,10 @@ namespace KittySDK
 
 			virtual void addAccount(IAccount *account) = 0;
 
+			virtual QAction *action(const QString &id) = 0;
+			virtual void addAction(const QString &id, QAction *action) = 0;
+			virtual void removeAction(const QString &id) = 0;
+
 			virtual QPixmap icon(const QString &id) = 0;
 			virtual void addIcon(const QString &id, const QPixmap &pixmap, bool replace = true) = 0;
 			virtual void removeIcon(const QString &id) = 0;

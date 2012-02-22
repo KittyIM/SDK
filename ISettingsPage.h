@@ -10,7 +10,7 @@ namespace KittySDK
 	class ISettingsPage: public QWidget
 	{
 		Q_OBJECT
-		Q_PROPERTY(QString name READ name WRITE setName)
+		Q_PROPERTY(QString id READ id WRITE setId)
 		Q_PROPERTY(QString icon READ icon WRITE setIcon)
 
 		public:
@@ -18,8 +18,8 @@ namespace KittySDK
 
 			IPluginCore *core() const { return m_core; }
 
-			QString name() const { return m_name; }
-			void setName(const QString &name) { m_name = name; }
+			QString id() const { return m_id; }
+			void setId(const QString &name) { m_id = name; }
 
 			QString icon() const { return m_icon; }
 			void setIcon(const QString &icon) { m_icon = icon; }
@@ -30,7 +30,7 @@ namespace KittySDK
 
 		private:
 			IPluginCore *m_core;
-			QString m_name;
+			QString m_id;
 			QString m_icon;
 	};
 }
