@@ -1,7 +1,7 @@
-#ifndef SOUNDSCONSTANTS_H
-#define SOUNDSCONSTANTS_H
+#ifndef SOUNDS_CONSTANTS_H
+#define SOUNDS_CONSTANTS_H
 
-namespace KittySDK
+namespace Sounds
 {
 	namespace Sounds
 	{
@@ -16,13 +16,18 @@ namespace KittySDK
 
 	namespace Icons
 	{
-		const char I_SOUND_MUTE[]			= "Sounds.Mute";
+		const char I_MUTE[]					= "Sounds.Mute";
 	}
 
 	namespace SettingPages
 	{
 		const char S_SOUNDS[]				= "Plugin.Sounds";
 	}
+
+	namespace Actions
+	{
+		const char A_MUTE[]					= " Sounds.Mute";
+	}
 }
 
-#endif // SOUNDSCONSTANTS_H
+#endif // SOUNDS_CONSTANTS_H

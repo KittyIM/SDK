@@ -65,7 +65,7 @@ namespace KittySDK
 			virtual void updateIcons() { }
 			virtual void receiveMessage(const IMessage &msg) { }
 			virtual void processMessage(IMessage &msg) { }
-			virtual void execAction(const QString &name, const QMap<QString, QVariant> &args) { }
+			virtual void execAction(const QString &name, const QMap<QString, QVariant> &args = QMap<QString, QVariant>()) { }
 
 		protected:
 			IPluginInfo *m_info;
