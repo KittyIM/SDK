@@ -121,6 +121,7 @@ namespace KittySDK
 		const char S_PROFILE_PASSWORD[]					= "Profile.Password";
 
 		const char S_HISTORYWINDOW_GEOMETRY[]			= "Kitty.HistoryWindow.Geometry";
+		const char S_HISTORYWINDOW_SPLITTER[]			= "Kitty.HistoryWindow.Splitter";
 		const char S_HISTORYWINDOW_COLUMNS[]			= "Kitty.HistoryWindow.Columns";
 		const char S_HISTORYWINDOW_FILTERS[]			= "Kitty.HistoryWindow.Filters";
 
