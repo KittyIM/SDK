@@ -114,6 +114,8 @@ namespace KittySDK
 
 		const char S_CHATWINDOW_SPELLCHECK_ENABLED[]	= "Kitty.ChatWindow.SpellCheck.Enabled";
 		const char S_CHATWINDOW_SPELLCHECK_DICT[]		= "Kitty.ChatWindow.SpellCheck.Dictionary";
+		const char S_CHATWINDOW_SPELLCHECK_SUGGESTIONS[]= "Kitty.ChatWindow.SpellCheck.Suggestions";
+
 		const char S_CHATWINDOW_TABBAR_HIDE_ONE[]		= "Kitty.ChatWindow.TabBar.HideIfOneTab";
 		const char S_CHATWINDOW_TABBAR_CLOSE_WND[]		= "Kitty.ChatWindow.TabBar.CloseWithWnd";
 		const char S_CHATWINDOW_TABBAR_FKEYS[]			= "Kitty.ChatWindow.TabBar.UseFKeys";
