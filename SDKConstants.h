@@ -106,6 +106,9 @@ namespace KittySDK
 		const char S_CHATWINDOW_FORMATTING[]			= "Kitty.ChatWindow.Formatting";
 		const char S_CHATWINDOW_UNDERLINE_LINKS[]		= "Kitty.ChatWindow.UnderlineLinks";
 
+		const char S_CHATWINDOW_TOOLBAR_POS[]			= "Kitty.ChatWindow.ToolBar.Position";
+		const char S_CHATWINDOW_MIN_EDIT_HEIGHT[]		= "Kitty.ChatWindow.Edit.MinHeight";
+
 		const char S_CHATWINDOW_CLEAR_MESSAGES[]		= "Kitty.ChatWindow.Clear.Messages";
 		const char S_CHATWINDOW_CLEAR_INTERVAL[]		= "Kitty.ChatWindow.Clear.Interval";
 
