@@ -47,6 +47,7 @@ namespace KittySDK
 		const char I_ERASE[]				= "Kitty.Erase";
 		const char I_TYPING_ON[]			= "Kitty.TypingOn";
 		const char I_TYPING_OFF[]			= "Kitty.TypingOff";
+		const char I_GROUP_CHAT[]			= "Kitty.GroupChat";
 		const char I_BLANK[]				= "Kitty.Blank";
 		const char I_STATUS_ONLINE[]		= "Kitty.StatusOnline";
 		const char I_STATUS_AWAY[]			= "Kitty.StatusAway";
