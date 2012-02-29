@@ -1,8 +1,9 @@
 #ifndef SDK_IPLUGINCORE_H
 #define SDK_IPLUGINCORE_H
 
+#include "IMessage.h"
+
 #include <QtCore/QVariant>
-#include <QtCore/QObject>
 
 class QToolButton;
 class QString;
@@ -11,7 +12,6 @@ class QAction;
 namespace KittySDK
 {
 	class ISettingsPage;
-	class IContact;
 	class IAccount;
 
 	class IPluginCore: public QObject
@@ -55,6 +55,13 @@ namespace KittySDK
 			virtual QPixmap icon(const QString &id) = 0;
 			virtual void addIcon(const QString &id, const QPixmap &pixmap, bool replace = true) = 0;
 			virtual void removeIcon(const QString &id) = 0;
+
+			virtual quint32 enqueue(const KittySDK::IMessage &msg) = 0;
+			virtual void dequeue(const quint32 &msgId) = 0;
+			virtual void dequeue(const QString &chatId) = 0;
+			virtual quint32 queueMsgId(const KittySDK::IMessage &msg) = 0;
+
+			virtual QString kittyVersion() = 0;
 
 		signals:
 			void allPluginsLoaded();

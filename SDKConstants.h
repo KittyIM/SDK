@@ -160,6 +160,9 @@ namespace KittySDK
 		const char S_ROSTER_TIPS_PHONE[]				= "Kitty.Roster.Tips.Phone";
 		const char S_ROSTER_TIPS_DESCRIPTION[]			= "Kitty.Roster.Tips.Description";
 
+		const char S_TRAYICON_PROTOCOL[]				= "Kitty.TrayIcon.Protocol";
+		const char S_TRAYICON_ACCOUNT[]					= "Kitty.TrayIcon.Account";
+		const char S_BLINKING_SPEED[]					= "Kitty.Blinking.Speed";
 
 		//const char S_[]								= "Kitty.";
 	}
@@ -172,6 +175,7 @@ namespace KittySDK
 		const char S_USER[]							= "User";
 		const char S_USER_ACCOUNTS[]				= "User.Accounts";
 		const char S_DISPLAY[]						= "Display";
+		const char S_DISPLAY_MAINWINDOW[]			= "Display.MainWindow";
 		const char S_DISPLAY_THEMES[]				= "Display.Themes";
 		const char S_DISPLAY_ROSTER[]				= "Display.Roster";
 		const char S_DISPLAY_HISTORY[]				= "Display.History";

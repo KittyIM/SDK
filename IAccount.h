@@ -20,7 +20,12 @@ namespace KittySDK
 		Q_PROPERTY(QString password READ password WRITE setPassword)
 
 		public:
-			IAccount(const QString &uid, IProtocol *parent): QObject(parent), m_uid(uid), m_protocol(parent) { }
+			IAccount(const QString &uid, IProtocol *parent):
+				QObject(parent),
+				m_uid(uid),
+				m_me(0),
+				m_protocol(parent)
+			{ }
 
 			IProtocol *protocol() const { return m_protocol; }
 

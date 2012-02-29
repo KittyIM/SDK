@@ -10,13 +10,10 @@ namespace KittySDK
 	class IProtocol;
 	class IMessage;
 
-	class IChat: public QObject
+	class IChat
 	{
-		Q_OBJECT
-
 		public:
 			IChat(IContact *me, const QList<IContact*> &contacts, const QString &id = 0):
-				QObject(me),
 				m_me(me),
 				m_contacts(contacts),
 				m_id(id)
