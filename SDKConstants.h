@@ -119,6 +119,10 @@ namespace KittySDK
 		const char S_CHATWINDOW_SPELLCHECK_DICT[]		= "Kitty.ChatWindow.SpellCheck.Dictionary";
 		const char S_CHATWINDOW_SPELLCHECK_SUGGESTIONS[]= "Kitty.ChatWindow.SpellCheck.Suggestions";
 
+		const char S_CHATEDIT_FONT_FAMILY[]				= "Kitty.ChatEdit.Font.Family";
+		const char S_CHATEDIT_FONT_SIZE[]				= "Kitty.ChatEdit.Font.Size";
+		const char S_CHATEDIT_FONT_ANTIALIASING[]		= "Kitty.ChatEdit.Font.AntiAliasing";
+
 		const char S_CHATWINDOW_TABBAR_HIDE_ONE[]		= "Kitty.ChatWindow.TabBar.HideIfOneTab";
 		const char S_CHATWINDOW_TABBAR_CLOSE_WND[]		= "Kitty.ChatWindow.TabBar.CloseWithWnd";
 		const char S_CHATWINDOW_TABBAR_FKEYS[]			= "Kitty.ChatWindow.TabBar.UseFKeys";
@@ -182,6 +186,7 @@ namespace KittySDK
 		const char S_DISPLAY_ROSTER[]				= "Display.Roster";
 		const char S_DISPLAY_HISTORY[]				= "Display.History";
 		const char S_DISPLAY_CHATWINDOW[]			= "Display.ChatWindow";
+		const char S_DISPLAY_CHATWINDOW_EDIT[]		= "Display.ChatWindow.Edit";
 		const char S_DISPLAY_CHATWINDOW_TABS[]		= "Display.ChatWindow.Tabs";
 		const char S_DISPLAY_CHATWINDOW_SMILIES[]	= "Display.ChatWindow.Smilies";
 		const char S_PLUGINS[]						= "Plugins";
