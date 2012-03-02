@@ -1,6 +1,8 @@
 #ifndef SDKCONSTANTS_H
 #define SDKCONSTANTS_H
 
+#define KITTYSDK_VERSION "1"
+
 namespace KittySDK
 {
 	namespace Icons

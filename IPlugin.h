@@ -1,6 +1,7 @@
 #ifndef SDK_IPLUGIN_H
 #define SDK_IPLUGIN_H
 
+#include "SDKConstants.h"
 #include "IPluginCore.h"
 
 #include <QtCore/QObject>
@@ -73,14 +74,25 @@ namespace KittySDK
 	};
 }
 
+#ifdef QT_NO_DEBUG
+	#define KITTY_DEBUG_STR "false"
+#else
+	#define KITTY_DEBUG_STR "true"
+#endif
+
 #define KITTY_PLUGIN(PLUGINCLASS) \
+	Q_EXTERN_C Q_DECL_EXPORT const char *info() \
+{ \
+	static const char plug_info[] = "sdkversion=" KITTYSDK_VERSION "\ndebug=" KITTY_DEBUG_STR "\nbuildkey=" QT_BUILD_KEY; \
+	return plug_info; \
+} \
 	Q_EXTERN_C Q_DECL_EXPORT QObject *inst(KittySDK::IPluginCore *core) \
 { \
 	static QPointer<QObject> m_inst; \
 	if(!m_inst) { \
-	m_inst = new PLUGINCLASS(core); \
+		m_inst = new PLUGINCLASS(core); \
 	} \
 	return m_inst; \
-	}
+}
 
 #endif // SDK_IPLUGIN_H
