@@ -12,12 +12,6 @@ namespace KittySDK
 	class IMessage
 	{
 		public:
-			enum Type
-			{
-				Private = 0,
-				Conference
-			};
-
 			enum Direction
 			{
 				Incoming = 0,
@@ -26,23 +20,21 @@ namespace KittySDK
 			};
 
 		public:
-			IMessage(IContact *from, IContact *to, const QString &body = "", const QDateTime &timeStamp = QDateTime::currentDateTime(), const Type &type = Private, const Direction &dir = Outgoing):
+			IMessage(IContact *from, IContact *to, const QString &body = "", const QDateTime &timeStamp = QDateTime::currentDateTime(), const Direction &dir = Outgoing):
 				m_from(from),
 				m_to(QList<IContact*>() << to),
 				m_chat(0),
 				m_body(body),
 				m_timeStamp(timeStamp),
-				m_type(type),
 				m_direction(dir)
 			{ }
 
-			IMessage(IContact *from, const QList<IContact*> &to, const QString &body = "", const QDateTime &timeStamp = QDateTime::currentDateTime(), const Type &type = Private, const Direction &dir = Outgoing):
+			IMessage(IContact *from, const QList<IContact*> &to, const QString &body = "", const QDateTime &timeStamp = QDateTime::currentDateTime(), const Direction &dir = Outgoing):
 				m_from(from),
 				m_to(to),
 				m_chat(0),
 				m_body(body),
 				m_timeStamp(timeStamp),
-				m_type(type),
 				m_direction(dir)
 			{ }
 
@@ -59,9 +51,6 @@ namespace KittySDK
 			QDateTime timeStamp() const { return m_timeStamp; }
 			void setTimeStamp(const QDateTime &timeStamp) { m_timeStamp = timeStamp; }
 
-			Type type() const { return m_type; }
-			void setType(const Type &type) { m_type = type; }
-
 			Direction direction() const { return m_direction; }
 			void setDirection(const Direction &dir) { m_direction = dir; }
 
@@ -71,7 +60,6 @@ namespace KittySDK
 			IChat *m_chat;
 			QString m_body;
 			QDateTime m_timeStamp;
-			Type m_type;
 			Direction m_direction;
 	};
 }
