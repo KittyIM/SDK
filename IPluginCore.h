@@ -21,6 +21,7 @@ namespace KittySDK
 		public:
 			virtual QVariant setting(const QString &key, const QVariant &defaultValue = QVariant()) = 0;
 			virtual void setSetting(const QString &key, const QVariant &value) = 0;
+			virtual QMap<QString, QVariant> settings() = 0;
 
 			virtual void execPluginAction(const QString &pluginId, const QString &actionName, const QMap<QString, QVariant> &actionArgs) = 0;
 
@@ -56,10 +57,8 @@ namespace KittySDK
 			virtual void addIcon(const QString &id, const QPixmap &pixmap, bool replace = true) = 0;
 			virtual void removeIcon(const QString &id) = 0;
 
-			virtual quint32 enqueue(const KittySDK::IMessage &msg) = 0;
-			virtual void dequeue(const quint32 &msgId) = 0;
-			virtual void dequeue(const QString &chatId) = 0;
-			virtual quint32 queueMsgId(const KittySDK::IMessage &msg) = 0;
+			virtual quint32 enqueueMsg(const KittySDK::IMessage &msg) = 0;
+			virtual void archiveMsg(const KittySDK::IMessage &msg) = 0;
 
 			virtual QString kittyVersion() = 0;
 
