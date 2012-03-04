@@ -21,7 +21,6 @@ namespace KittySDK
 		public:
 			virtual QVariant setting(const QString &key, const QVariant &defaultValue = QVariant()) = 0;
 			virtual void setSetting(const QString &key, const QVariant &value) = 0;
-			virtual QMap<QString, QVariant> settings() = 0;
 
 			virtual void execPluginAction(const QString &pluginId, const QString &actionName, const QMap<QString, QVariant> &actionArgs) = 0;
 
