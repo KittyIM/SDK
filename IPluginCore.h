@@ -63,6 +63,12 @@ namespace KittySDK
 
 		signals:
 			void allPluginsLoaded();
+
+			void allAccountsLoaded();
+			void accountsAboutToSave();
+
+			void allContactsLoaded();
+			void contactsAboutToSave();
 	};
 }
 
