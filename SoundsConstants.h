@@ -26,7 +26,7 @@ namespace Sounds
 
 	namespace Actions
 	{
-		const char A_MUTE[]					= " Sounds.Mute";
+		const char A_MUTE[]					= "Sounds.Mute";
 	}
 }
 
