@@ -31,7 +31,8 @@ namespace KittySDK
 
 			virtual int contactCount() = 0;
 			virtual IContact *contact(const int &id) = 0;
-			virtual QList<IContact*> contacts(const QString &account, const QString &protocol) = 0;
+			virtual IContact *contact(const QString &protocol, const QString &account, const QString &uid) = 0;
+			virtual QList<IContact*> contacts(const QString &protocol, const QString &account) = 0;
 			virtual QList<IContact*> contacts(const QString &protocol) = 0;
 
 			virtual QStringList plugins() = 0;
