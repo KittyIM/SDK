@@ -217,6 +217,7 @@ namespace KittySDK
 		const char I_WORK_WEBSITE[]			= "WorkWebsite";
 		const char I_HOMEPAGE[]				= "Homepage";
 		const char I_NOTES[]				= "Notes";
+		const char I_TEMPORARY[]			= "Temporary";
 	}
 
 	namespace Toolbars
