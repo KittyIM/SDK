@@ -18,7 +18,12 @@ namespace KittySDK
 		Q_PROPERTY(KittySDK::IProtocol::Status status READ status WRITE setStatus)
 
 		public:
-			IContact(const QString &uid, IAccount *account): QObject(account), m_uid(uid), m_status(IProtocol::Offline), m_account(account) { }
+			IContact(const QString &uid, IAccount *account):
+				QObject(account),
+				m_uid(uid),
+				m_status(IProtocol::Offline),
+				m_account(account)
+			{ }
 
 			QString uid() const { return m_uid; }
 			void setUid(const QString &uid) { m_uid = uid; }

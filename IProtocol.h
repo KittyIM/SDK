@@ -58,7 +58,9 @@ namespace KittySDK
 			Q_DECLARE_FLAGS(Abilities, Ability)
 
 		public:
-			IProtocol(IPluginCore *core): IPlugin(core) { }
+			IProtocol(IPluginCore *core):
+				IPlugin(core)
+			{ }
 
 			IProtocolInfo *protoInfo() const { return static_cast<IProtocolInfo*>(m_info); }
 

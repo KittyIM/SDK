@@ -14,7 +14,10 @@ namespace KittySDK
 		Q_PROPERTY(QString icon READ icon WRITE setIcon)
 
 		public:
-			ISettingsPage(IPluginCore *core, QWidget *parent = 0): QWidget(parent), m_core(core) { }
+			ISettingsPage(IPluginCore *core, QWidget *parent = 0):
+				QWidget(parent),
+				m_core(core)
+			{ }
 
 			IPluginCore *core() const { return m_core; }
 

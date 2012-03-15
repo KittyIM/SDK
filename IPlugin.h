@@ -49,7 +49,11 @@ namespace KittySDK
 		Q_OBJECT
 
 		public:
-			IPlugin(IPluginCore *core): QObject(0), m_info(0), m_core(core) { }
+			IPlugin(IPluginCore *core):
+				QObject(0),
+				m_info(0),
+				m_core(core)
+			{ }
 
 			enum { Type = 1 };
 			virtual int type() const { return Type; }

@@ -13,7 +13,7 @@ namespace KittySDK
 	class IChat
 	{
 		public:
-			IChat(IContact *me, const QList<IContact*> &contacts, const QString &id = 0):
+			IChat(IContact *me, const QList<IContact*> &contacts, const QString &id = QString()):
 				m_me(me),
 				m_contacts(contacts),
 				m_id(id)

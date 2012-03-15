@@ -20,7 +20,7 @@ namespace KittySDK
 			};
 
 		public:
-			IMessage(IContact *from, IContact *to, const QString &body = "", const QDateTime &timeStamp = QDateTime::currentDateTime(), const Direction &dir = Outgoing):
+			IMessage(IContact *from, IContact *to, const QString &body = QString(), const QDateTime &timeStamp = QDateTime::currentDateTime(), const Direction &dir = Outgoing):
 				m_from(from),
 				m_to(QList<IContact*>() << to),
 				m_chat(0),
@@ -29,7 +29,7 @@ namespace KittySDK
 				m_direction(dir)
 			{ }
 
-			IMessage(IContact *from, const QList<IContact*> &to, const QString &body = "", const QDateTime &timeStamp = QDateTime::currentDateTime(), const Direction &dir = Outgoing):
+			IMessage(IContact *from, const QList<IContact*> &to, const QString &body = QString(), const QDateTime &timeStamp = QDateTime::currentDateTime(), const Direction &dir = Outgoing):
 				m_from(from),
 				m_to(to),
 				m_chat(0),
