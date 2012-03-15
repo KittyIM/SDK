@@ -19,6 +19,10 @@ namespace KittySDK
 		Q_OBJECT
 
 		public:
+			IPluginCore(QObject *parent = 0):
+				QObject(parent)
+			{ }
+
 			virtual QVariant setting(const QString &key, const QVariant &defaultValue = QVariant()) = 0;
 			virtual void setSetting(const QString &key, const QVariant &value) = 0;
 
