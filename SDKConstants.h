@@ -148,6 +148,10 @@ namespace KittySDK
 		const char S_PROXY_USERNAME[]					= "Kitty.Proxy.Auth.Username";
 		const char S_PROXY_PASSWORD[]					= "Kitty.Proxy.Auth.Password";
 
+		const char S_RECONNECT[]						= "Kitty.Reconnect";
+		const char S_SLEEP_DISCONNECT[]					= "Kitty.Sleep.Disconnect";
+		const char S_WAKEUP_CONNECT[]					= "Kitty.WakeUp.Connect";
+
 		const char S_HISTORY_ENABLED[]					= "Kitty.History.Enabled";
 		const char S_HISTORY_STRANGERS[]				= "Kitty.History.Strangers";
 		const char S_HISTORY_EXPIRE_DAYS[]				= "Kitty.History.ExpireDays";
